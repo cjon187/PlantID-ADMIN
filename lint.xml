@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="CutPasteId">
+        <ignore path="src/com/example/plantid/Info.java" />
+    </issue>
+    <issue id="InlinedApi">
+        <ignore path="src/com/example/plantid/Info.java" />
+    </issue>
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src/com/example/plantdb/Info.java" />
+        <ignore path="src/com/example/plantdb/MainActivity.java" />
+    </issue>
+    <issue id="ShowToast">
+        <ignore path="src/com/example/plantid/Favlist.java" />
+    </issue>
+</lint>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+      <item android:id="@+id/google"
+            android:title="Google Search"/>
+      <item android:id="@+id/share"
+          android:title="Share"/>
+      <item android:id="@+id/viewpest"
+          android:title="View Pest Submissions"/>
+      <item android:id="@+id/remove"
+          android:title="Remove From List"/>
+      <item android:id="@+id/main"
+            android:title="Home"/>
+
+</menu>

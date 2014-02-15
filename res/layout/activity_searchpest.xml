@@ -1,0 +1,134 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E0E8F0" >
+
+    <LinearLayout
+        android:id="@+id/h2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/ButtonText"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/firered"
+            android:onClick="query"
+            android:text="SEARCH"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            style="@style/ButtonText"
+            android:layout_width="114dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/firered"
+            android:onClick="fav"
+            android:text="FAVORITES LIST"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button21"
+            style="@style/ButtonText"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/firered"
+            android:onClick="clear"
+            android:text="CLEAR"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/h2" >
+
+         <!--Scrollable content here-->
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E0E8F0"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            app:context=".Search" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+<TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E0E8F0"
+                android:gravity="center_horizontal"
+                android:text="Pest Image Search"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/a22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E0E8F0"
+                android:gravity="center_horizontal"
+                android:text="Disease"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:entries="@array/disease" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E0E8F0"
+                android:gravity="center_horizontal"
+                android:text="Animal Pest"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:entries="@array/animal" />
+              
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

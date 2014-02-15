@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PlantID2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_search">Search</string>
+    <string name="family">Family</string>
+    <string name="species">Species</string>
+    <string name="common">Common Name</string>
+
+    <string-array name="months">
+        <item>All</item>
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string-array name="disease">
+        <item>All</item>
+        <item>Abiotic disorder</item>
+        <item>Anthracnose</item>
+        <item>Bacterial disease</item>
+        <item>Blight</item>
+        <item>Canker disease</item>
+        <item>Crown rot</item>
+        <item>Dieback</item>
+        <item>Fungal leaf spot</item>
+        <item>Heart rot</item>
+        <item>Leaf scorch</item>
+        <item>Mildew powdery or downy</item>
+        <item>Mistletoe</item>
+        <item>Mold</item>
+        <item>Root rot</item>
+        <item>Rust</item>
+        <item>Sap rot</item>
+        <item>Thrips</item>
+        <item>Virus</item>
+        <item>Wilt</item>
+    </string-array>
+    <string-array name="diseaseUpload">
+        <item>NONE</item>
+        <item>Abiotic disorder</item>
+        <item>Anthracnose</item>
+        <item>Bacterial disease</item>
+        <item>Blight</item>
+        <item>Canker disease</item>
+        <item>Crown rot</item>
+        <item>Dieback</item>
+        <item>Fungal leaf spot</item>
+        <item>Heart rot</item>
+        <item>Leaf scorch</item>
+        <item>Mildew powdery or downy</item>
+        <item>Mistletoe</item>
+        <item>Mold</item>
+        <item>Root rot</item>
+        <item>Rust</item>
+        <item>Sap rot</item>
+        <item>Thrips</item>
+        <item>Virus</item>
+        <item>Wilt</item>
+    </string-array>
+    <string-array name="animal">
+        <item>All</item>
+        <item>Disease resistant</item>
+        <item>Pest resistant</item>
+        <item>Deer resistant</item>
+        <item>Rabbit resistant</item>
+        <item>Aphids</item>
+        <item>Bark beetles</item>
+        <item>Caterpillar or looper</item>
+        <item>Chewing insect</item>
+        <item>Earwigs</item>
+        <item>Galls</item>
+        <item>Leaf miner insect</item>
+        <item>Leaf roller insect</item>
+        <item>Mealy bugs</item>
+        <item>Mites</item>
+        <item>Nematodes</item>
+        <item>Rodents</item>
+        <item>Scale insects</item>
+        <item>Slugs or snails</item>
+        <item>Stem borer insects</item>
+        <item>Sucking insects</item>
+        <item>Thrips</item>
+        <item>Weevils</item>
+        <item>Whitefly</item>
+    </string-array>
+     <string-array name="animalUpload">
+        <item>NONE</item>
+        <item>Aphids</item>
+        <item>Bark beetles</item>
+        <item>Caterpillar or looper</item>
+        <item>Chewing insect</item>
+        <item>Earwigs</item>
+        <item>Galls</item>
+        <item>Leaf miner insect</item>
+        <item>Leaf roller insect</item>
+        <item>Mealy bugs</item>
+        <item>Mites</item>
+        <item>Nematodes</item>
+        <item>Rodents</item>
+        <item>Scale insects</item>
+        <item>Slugs or snails</item>
+        <item>Stem borer insects</item>
+        <item>Sucking insects</item>
+        <item>Thrips</item>
+        <item>Weevils</item>
+        <item>Whitefly</item>
+    </string-array>
+    <string-array name="resistance">
+        <item>All</item>
+        <item>Disease resistant</item>
+        <item>Pest resistant</item>
+        <item>Deer resistant</item>
+        <item>Rabbit resistant</item>
+    </string-array>
+    <string-array name="leafshape">
+        <item>All</item>
+        <item>Acuminate</item>
+        <item>Acute</item>
+        <item>Aristate</item>
+        <item>Deltoid</item>
+        <item>Elliptic</item>
+        <item>Falcate</item>
+        <item>Filiform</item>
+        <item>Lanceolate</item>
+        <item>Linear</item>
+        <item>Oblanceolate</item>
+        <item>Oblong</item>
+        <item>Obovate</item>
+        <item>Orbicular</item>
+        <item>Other</item>
+        <item>Ovate</item>
+        <item>Reniform</item>
+        <item>Rhomboidal</item>
+        <item>Rounded</item>
+        <item>Spatulate</item>
+    </string-array>
+    <string-array name="type">
+        <item>All</item>
+        <item>Aquatic plant</item>
+        <item>Bamboo</item>
+        <item>Biennial</item>
+        <item>Broadleaf evergreen</item>
+        <item>Conifer</item>
+        <item>Fern</item>
+        <item>Flowering cut plant</item>
+        <item>Flowering pot plant</item>
+        <item>Greenhouse produce plant</item>
+        <item>Ground cover</item>
+        <item>Herbaceous perennial</item>
+        <item>Indoor foliage plant</item>
+        <item>Invasive plant</item>
+        <item>Poales (grass-like)</item>
+        <item>Semi-evergreen</item>
+        <item>Shrub - deciduous</item>
+        <item>Tree - deciduous</item>
+        <item>Vine or climber</item>
+        <item>Weed (horticultural)</item>
+    </string-array>
+    <string-array name="leafform">
+        <item>All</item>
+        <item>Compound</item>
+        <item>Dissected</item>
+        <item>Fern-like</item>
+        <item>Grass-like</item>
+        <item>Lobed</item>
+        <item>Needle-like</item>
+        <item>Scale-like</item>
+        <item>Simple</item>
+    </string-array>
+    <string-array name="leafarrangement">
+        <item>All</item>
+        <item>Alternate</item>
+        <item>Opposite</item>
+        <item>Whorled</item>
+        <item>Spiraled</item>
+        <item>Imbricate</item>
+        <item>Basal</item>
+        <item>Sessile</item>
+        <item>Fascicles</item>
+    </string-array>
+    <string-array name="colours">
+        <item>All</item>
+        <item>White</item>
+        <item>Violet</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Green-yellow</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Red</item>
+        <item>Dark-red</item>
+        <item>Magenta</item>
+        <item>Brown</item>
+        <item>Bronze</item>
+        <item>Silver</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="pest">
+        <item>All</item>
+        <item>Abiotic disorder</item>
+        <item>Anthracnose</item>
+        <item>Aphids</item>
+        <item>Bacterial disease</item>
+        <item>Bark beetles</item>
+        <item>Blight</item>
+        <item>Canker disease</item>
+        <item>Caterpillar or looper</item>
+        <item>Chewing insect</item>
+        <item>Crown rot</item>
+        <item>Deer resistant</item>
+        <item>Dieback</item>
+        <item>Earwigs</item>
+        <item>Fungal leaf spot</item>
+        <item>Galls</item>
+        <item>Heart rot</item>
+        <item>Leaf miner insect</item>
+        <item>Leaf roller insect</item>
+        <item>Leaf scorch</item>
+        <item>Mealy bugs</item>
+        <item>Mildew powdery or downy</item>
+        <item>Mistletoe</item>
+        <item>Mites</item>
+        <item>Mold</item>
+        <item>Nematodes</item>
+        <item>Rabbit resistant</item>
+        <item>Rodents</item>
+        <item>Root rot</item>
+        <item>Rust</item>
+        <item>Sap rot</item>
+        <item>Scale insects</item>
+        <item>Slugs or snails</item>
+        <item>Stem borer insects</item>
+        <item>Sucking insects</item>
+        <item>Thrips</item>
+        <item>Virus</item>
+        <item>Weevils</item>
+        <item>Whitefly</item>
+        <item>Wilt</item>
+    </string-array>
+    <string-array name="pestupload">
+        <item>SELECT</item>
+        <item>Abiotic disorder</item>
+        <item>Deer resistant</item>
+        <item>Mildew powdery or downy</item>
+        <item>Scale insects</item>
+        <item>Anthracnose</item>
+        <item>Dieback</item>
+        <item>Mistletoe</item>
+        <item>Slugs or snails</item>
+        <item>Aphids</item>
+        <item>Earwigs</item>
+        <item>Mites</item>
+        <item>Stem borer insects</item>
+        <item>Bacterial disease</item>
+        <item>Fungal leaf spot</item>
+        <item>Mold</item>
+        <item>Sucking insects</item>
+        <item>Bark beetles</item>
+        <item>Galls</item>
+        <item>Nematodes</item>
+        <item>Thrips</item>
+        <item>Blight</item>
+        <item>Heart rot</item>
+        <item>Rabbit resistant</item>
+        <item>Virus</item>
+        <item>Canker disease</item>
+        <item>Leaf miner insect</item>
+        <item>Rodents</item>
+        <item>Weevils</item>
+        <item>Caterpillar or looper</item>
+        <item>Leaf roller insect</item>
+        <item>Root rot</item>
+        <item>Whitefly</item>
+        <item>Chewing insect</item>
+        <item>Leaf scorch</item>
+        <item>Rust</item>
+        <item>Wilt</item>
+        <item>Crown rot</item>
+        <item>Mealy bugs</item>
+        <item>Sap rot</item>
+    </string-array>
+    <string-array name="family">
+        <item>All     </item>
+        <item>Actinidiaceae	</item>
+        <item>Adiantaceae	</item>
+        <item>Adoxaceae	</item>
+        <item>Aizoaceae	</item>
+        <item>Alismataceae	</item>
+        <item>Alliaceae	</item>
+        <item>Alstroemeriaceae	</item>
+        <item>Altingiaceae	</item>
+        <item>Amaranthaceae	</item>
+        <item>Amaryllidaceae	</item>
+        <item>Anacardiaceae	</item>
+        <item>Apiaceae	</item>
+        <item>Apocynaceae	</item>
+        <item>Aquifoliaceae	</item>
+        <item>Araceae	</item>
+        <item>Araliaceae	</item>
+        <item>Araucariaceae	</item>
+        <item>Arecaceae	</item>
+        <item>Aristolochiaceae	</item>
+        <item>Asclepiadaceae	</item>
+        <item>Asparagaceae	</item>
+        <item>Aspleniaceae	</item>
+        <item>Asteraceae	</item>
+        <item>Athyriaceae	</item>
+        <item>Azollaceae	</item>
+        <item>Balsaminaceae	</item>
+        <item>Begoniaceae	</item>
+        <item>Berberidaceae	</item>
+        <item>Betulaceae	</item>
+        <item>Bignoniaceae	</item>
+        <item>Blechnaceae	</item>
+        <item>Boraginaceae	</item>
+        <item>Brassicaceae	</item>
+        <item>Bromeliaceae	</item>
+        <item>Buxaceae	</item>
+        <item>Cactaceae	</item>
+        <item>Campanulaceae	</item>
+        <item>Cannabaceae	</item>
+        <item>Cannaceae	</item>
+        <item>Capparidaceae	</item>
+        <item>Caprifoliaceae	</item>
+        <item>Caryophyllaceae	</item>
+        <item>Celastraceae	</item>
+        <item>Cercidiphyllaceae	</item>
+        <item>Chenopodiaceae	</item>
+        <item>Cistaceae	</item>
+        <item>Clethraceae	</item>
+        <item>Clusiaceae	</item>
+        <item>Commelinaceae	</item>
+        <item>Convolvulaceae	</item>
+        <item>Cornaceae	</item>
+        <item>Corylaceae	</item>
+        <item>Crassulaceae	</item>
+        <item>Cucurbitaceae	</item>
+        <item>Cupressaceae	</item>
+        <item>Cycadaceae	</item>
+        <item>Cyperaceae	</item>
+        <item>Davalliaceae	</item>
+        <item>Davidiaceae	</item>
+        <item>Dipsacaceae	</item>
+        <item>Dryopteridaceae	</item>
+        <item>Elaeagnaceae	</item>
+        <item>Equisetaceae	</item>
+        <item>Ericaceae	</item>
+        <item>Escalloniaceae	</item>
+        <item>Euphorbiaceae	</item>
+        <item>Fabaceae	</item>
+        <item>Fagaceae	</item>
+        <item>Fumariaceae	</item>
+        <item>Garryaceae	</item>
+        <item>Gentianaceae	</item>
+        <item>Geraniaceae	</item>
+        <item>Gesneriaceae	</item>
+        <item>Ginkgoaceae	</item>
+        <item>Goodeniaceae	</item>
+        <item>Grossulariaceae	</item>
+        <item>Gunneraceae	</item>
+        <item>Hamamelidaceae	</item>
+        <item>Heliconiaceae	</item>
+        <item>Hyacinthaceae	</item>
+        <item>Hydrangeaceae	</item>
+        <item>Hypoxidaceae	</item>
+        <item>Iridaceae	</item>
+        <item>Juglandaceae	</item>
+        <item>Juncaceae	</item>
+        <item>Lamiaceae	</item>
+        <item>Lardizabalaceae	</item>
+        <item>Lemnaceae	</item>
+        <item>Liliaceae	</item>
+        <item>Lythraceae	</item>
+        <item>Magnoliaceae	</item>
+        <item>Malvaceae	</item>
+        <item>Marantaceae	</item>
+        <item>Marchantiaceae	</item>
+        <item>Melastomataceae	</item>
+        <item>Montiaceae	</item>
+        <item>Moraceae	</item>
+        <item>Musaceae	</item>
+        <item>Myricaceae	</item>
+        <item>Myrtaceae	</item>
+        <item>Nothofagaceae	</item>
+        <item>Nyctaginaceae	</item>
+        <item>Nymphaeaceae	</item>
+        <item>Nyssaceae	</item>
+        <item>Oleaceae	</item>
+        <item>Onagraceae	</item>
+        <item>Orchidaceae	</item>
+        <item>Osmundaceae	</item>
+        <item>Oxalidaceae	</item>
+        <item>Paeoniaceae	</item>
+        <item>Papaveraceae	</item>
+        <item>Passifloraceae	</item>
+        <item>Pinaceae	</item>
+        <item>Piperaceae	</item>
+        <item>Plantaginaceae	</item>
+        <item>Platanaceae	</item>
+        <item>Plumbaginaceae	</item>
+        <item>Poaceae	</item>
+        <item>Podocarpaceae	</item>
+        <item>Polemoniaceae	</item>
+        <item>Polygonaceae	</item>
+        <item>Polypodiaceae	</item>
+        <item>Pontederiaceae	</item>
+        <item>Portulacaceae	</item>
+        <item>Primulaceae	</item>
+        <item>Pteridaceae	</item>
+        <item>Ranunculaceae	</item>
+        <item>Rhamnaceae	</item>
+        <item>Rosaceae	</item>
+        <item>Rubiaceae	</item>
+        <item>Rutaceae	</item>
+        <item>Salicaceae	</item>
+        <item>Sapindaceae	</item>
+        <item>Saururaceae	</item>
+        <item>Saxifragaceae	</item>
+        <item>Sciadopityaceae	</item>
+        <item>Scrophulariaceae	</item>
+        <item>Selaginellaceae	</item>
+        <item>Simaroubaceae	</item>
+        <item>Solanaceae	</item>
+        <item>Sterculiaceae	</item>
+        <item>Strelitziaceae	</item>
+        <item>Styracaceae	</item>
+        <item>Taxaceae	</item>
+        <item>Teloschitaceae	</item>
+        <item>Theaceae	</item>
+        <item>Thelypteridaceae	</item>
+        <item>Thymelaeaceae	</item>
+        <item>Tropaeolaceae	</item>
+        <item>Typhaceae	</item>
+        <item>Ulmaceae	</item>
+        <item>Urticaceae	</item>
+        <item>Verbenaceae	</item>
+        <item>Violaceae	</item>
+        <item>Vitaceae	</item>
+        <item>Woodsiaceae</item>
+        <item>Xanthorrhoeaceae	</item>
+        <item>zeeaceae</item>
+    </string-array>
+    <string-array name="familyupload">
+        <item>Unknow</item>
+        <item>Actinidiaceae	</item>
+        <item>Adiantaceae	</item>
+        <item>Adoxaceae	</item>
+        <item>Aizoaceae	</item>
+        <item>Alismataceae	</item>
+        <item>Alliaceae	</item>
+        <item>Alstroemeriaceae	</item>
+        <item>Altingiaceae	</item>
+        <item>Amaranthaceae	</item>
+        <item>Amaryllidaceae	</item>
+        <item>Anacardiaceae	</item>
+        <item>Apiaceae	</item>
+        <item>Apocynaceae	</item>
+        <item>Aquifoliaceae	</item>
+        <item>Araceae	</item>
+        <item>Araliaceae	</item>
+        <item>Araucariaceae	</item>
+        <item>Arecaceae	</item>
+        <item>Aristolochiaceae	</item>
+        <item>Asclepiadaceae	</item>
+        <item>Asparagaceae	</item>
+        <item>Aspleniaceae	</item>
+        <item>Asteraceae	</item>
+        <item>Athyriaceae	</item>
+        <item>Azollaceae	</item>
+        <item>Balsaminaceae	</item>
+        <item>Begoniaceae	</item>
+        <item>Berberidaceae	</item>
+        <item>Betulaceae	</item>
+        <item>Bignoniaceae	</item>
+        <item>Blechnaceae	</item>
+        <item>Boraginaceae	</item>
+        <item>Brassicaceae	</item>
+        <item>Bromeliaceae	</item>
+        <item>Buxaceae	</item>
+        <item>Cactaceae	</item>
+        <item>Campanulaceae	</item>
+        <item>Cannabaceae	</item>
+        <item>Cannaceae	</item>
+        <item>Capparidaceae	</item>
+        <item>Caprifoliaceae	</item>
+        <item>Caryophyllaceae	</item>
+        <item>Celastraceae	</item>
+        <item>Cercidiphyllaceae	</item>
+        <item>Chenopodiaceae	</item>
+        <item>Cistaceae	</item>
+        <item>Clethraceae	</item>
+        <item>Clusiaceae	</item>
+        <item>Commelinaceae	</item>
+        <item>Convolvulaceae	</item>
+        <item>Cornaceae	</item>
+        <item>Corylaceae	</item>
+        <item>Crassulaceae	</item>
+        <item>Cucurbitaceae	</item>
+        <item>Cupressaceae	</item>
+        <item>Cycadaceae	</item>
+        <item>Cyperaceae	</item>
+        <item>Davalliaceae	</item>
+        <item>Davidiaceae	</item>
+        <item>Dipsacaceae	</item>
+        <item>Dryopteridaceae	</item>
+        <item>Elaeagnaceae	</item>
+        <item>Equisetaceae	</item>
+        <item>Ericaceae	</item>
+        <item>Escalloniaceae	</item>
+        <item>Euphorbiaceae	</item>
+        <item>Fabaceae	</item>
+        <item>Fagaceae	</item>
+        <item>Fumariaceae	</item>
+        <item>Garryaceae	</item>
+        <item>Gentianaceae	</item>
+        <item>Geraniaceae	</item>
+        <item>Gesneriaceae	</item>
+        <item>Ginkgoaceae	</item>
+        <item>Goodeniaceae	</item>
+        <item>Grossulariaceae	</item>
+        <item>Gunneraceae	</item>
+        <item>Hamamelidaceae	</item>
+        <item>Heliconiaceae	</item>
+        <item>Hyacinthaceae	</item>
+        <item>Hydrangeaceae	</item>
+        <item>Hypoxidaceae	</item>
+        <item>Iridaceae	</item>
+        <item>Juglandaceae	</item>
+        <item>Juncaceae	</item>
+        <item>Lamiaceae	</item>
+        <item>Lardizabalaceae	</item>
+        <item>Lemnaceae	</item>
+        <item>Liliaceae	</item>
+        <item>Lythraceae	</item>
+        <item>Magnoliaceae	</item>
+        <item>Malvaceae	</item>
+        <item>Marantaceae	</item>
+        <item>Marchantiaceae	</item>
+        <item>Melastomataceae	</item>
+        <item>Montiaceae	</item>
+        <item>Moraceae	</item>
+        <item>Musaceae	</item>
+        <item>Myricaceae	</item>
+        <item>Myrtaceae	</item>
+        <item>Nothofagaceae	</item>
+        <item>Nyctaginaceae	</item>
+        <item>Nymphaeaceae	</item>
+        <item>Nyssaceae	</item>
+        <item>Oleaceae	</item>
+        <item>Onagraceae	</item>
+        <item>Orchidaceae	</item>
+        <item>Osmundaceae	</item>
+        <item>Oxalidaceae	</item>
+        <item>Paeoniaceae	</item>
+        <item>Papaveraceae	</item>
+        <item>Passifloraceae	</item>
+        <item>Pinaceae	</item>
+        <item>Piperaceae	</item>
+        <item>Plantaginaceae	</item>
+        <item>Platanaceae	</item>
+        <item>Plumbaginaceae	</item>
+        <item>Poaceae	</item>
+        <item>Podocarpaceae	</item>
+        <item>Polemoniaceae	</item>
+        <item>Polygonaceae	</item>
+        <item>Polypodiaceae	</item>
+        <item>Pontederiaceae	</item>
+        <item>Portulacaceae	</item>
+        <item>Primulaceae	</item>
+        <item>Pteridaceae	</item>
+        <item>Ranunculaceae	</item>
+        <item>Rhamnaceae	</item>
+        <item>Rosaceae	</item>
+        <item>Rubiaceae	</item>
+        <item>Rutaceae	</item>
+        <item>Salicaceae	</item>
+        <item>Sapindaceae	</item>
+        <item>Saururaceae	</item>
+        <item>Saxifragaceae	</item>
+        <item>Sciadopityaceae	</item>
+        <item>Scrophulariaceae	</item>
+        <item>Selaginellaceae	</item>
+        <item>Simaroubaceae	</item>
+        <item>Solanaceae	</item>
+        <item>Sterculiaceae	</item>
+        <item>Strelitziaceae	</item>
+        <item>Styracaceae	</item>
+        <item>Taxaceae	</item>
+        <item>Teloschitaceae	</item>
+        <item>Theaceae	</item>
+        <item>Thelypteridaceae	</item>
+        <item>Thymelaeaceae	</item>
+        <item>Tropaeolaceae	</item>
+        <item>Typhaceae	</item>
+        <item>Ulmaceae	</item>
+        <item>Urticaceae	</item>
+        <item>Verbenaceae	</item>
+        <item>Violaceae	</item>
+        <item>Vitaceae	</item>
+        <item>Woodsiaceae</item>
+        <item>Xanthorrhoeaceae	</item>
+        <item>zeeaceae</item>
+    </string-array>
+    <string-array name="zones">
+        <item>All</item>
+        <item>Zone 1: (below -46 C)</item>
+        <item>Zone 2: (-46 to -40 C)</item>
+        <item>Zone 3: (-40 to -34 C)</item>
+        <item>Zone 4: (-34 to -29 C)</item>
+        <item>Zone 5: (-29 to -23 C)</item>
+        <item>Zone 6: (-23 to -18 C)</item>
+        <item>Zone 7: (-18 to -12 C)</item>
+        <item>Zone 8a: (-12 to -9.5 C)</item>
+        <item>Zone 8b: (-9.4 to -7 C)</item>
+        <item>Zone 9: (-7 to -1 C)</item>
+        <item>Zone 10: (-1 to 4 C)</item>
+        <item>Zone 11: (above 4 C)</item>
+    </string-array>
+    <string-array name="zonesupload">
+        <item>Unknow</item>
+        <item>Zone 0</item>
+        <item>Zone One: (below -46 C)</item>
+        <item>Zone 2: (-46 to -40 C)</item>
+        <item>Zone 3: (-40 to -34 C)</item>
+        <item>Zone 4: (-34 to -29 C)</item>
+        <item>Zone 5: (-29 to -23 C)</item>
+        <item>Zone 6: (-23 to -18 C)</item>
+        <item>Zone 7: (-18 to -12 C)</item>
+        <item>Zone 8a: (-12 to -9.5 C)</item>
+        <item>Zone 8b: (-9.4 to -7 C)</item>
+        <item>Zone 9: (-7 to -1 C)</item>
+        <item>Zone Ten: (-1 to 4 C)</item>
+        <item>Zone 11: (above 4 C)</item>
+    </string-array>
+
+    <string name="title_activity_info">Info</string>
+    <string name="title_activity_add">Add</string>
+    <string name="title_activity_webimage">Webimage</string>
+    <string name="title_activity_gpspic">Gpspic</string>
+    <string name="title_activity_slide">Slide</string>
+    <string name="title_activity_start">Start</string>
+    <string name="title_activity_favlist">Favlist</string>
+    <string name="title_activity_infofav">Infofav</string>
+
+    <color name="red">#bbff0000</color>
+
+    <string name="title_activity_searchpest">Searchpest</string>
+    <string name="title_activity_main_activity_pest">MainActivityPest</string>
+    <string name="title_activity_infopest">Infopest</string>
+    <string name="title_activity_fullimage">Fullimage</string>
+    <string name="title_activity_pestlist">Pestlist</string>
+    <string name="title_activity_favpestlist">Favpestlist</string>
+    <string name="title_activity_infopestfav">Infopestfav</string>
+
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <string name="title_activity_pest_map">PestMap</string>
+    <string name="title_activity_info_map_pest">InfoMapPest</string>
+    <string name="title_activity_kwantlen">Kwantlen</string>
+    <string name="title_activity_addloc">Addloc</string>
+    <string name="title_activity_info_location_map">InfoLocationMap</string>
+    <string name="title_activity_location_full">LocationFull</string>
+    <string name="title_activity_information">Information</string>
+
+</resources>
