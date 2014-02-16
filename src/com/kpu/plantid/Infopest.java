@@ -38,11 +38,9 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -65,6 +63,7 @@ public class Infopest extends Activity {
 	String jon,latitude,longitude;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 		setTheme(android.R.style.Theme_Holo_Light);
 		System.gc();
 		super.onCreate(savedInstanceState);
@@ -317,6 +316,32 @@ public class Infopest extends Activity {
         return stream;
     }
 	
+	public void update (View view)
+	{
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, user, pass);
+			Statement st1 = (Statement) con.createStatement();
+			EditText e1=(EditText)findViewById(R.id.editText1);
+			String update1=e1.getText().toString();
+			if (global.a==1)
+			{
+			st1.executeUpdate("UPDATE pest SET des='"+update1+"' WHERE id="+id+"");
+			}
+			if (global.a==2)
+			{
+				st1.executeUpdate("UPDATE plantlocation SET des='"+update1+"' WHERE id="+id+"");
+			}
+			MainActivityPest.fa.finish();
+			finish();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	public void google(View view)
 	{
 		
@@ -449,6 +474,8 @@ public class Infopest extends Activity {
 					TextView date1= (TextView)findViewById(R.id.date);
 					date1.setText(Html.fromHtml("<b>Date Submitted: </font></b>"+date));
 					
+					EditText e1 = (EditText)findViewById(R.id.editText1);
+					e1.setText(des);
 					
 					aq = new AQuery(Infopest.this);
 					filename = (filename.substring(filename.lastIndexOf("/") + 1));
