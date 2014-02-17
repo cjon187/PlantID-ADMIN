@@ -88,7 +88,9 @@
         </activity>
         <activity
             android:name="com.kpu.plantid.Infopest"
-            android:label="@string/title_activity_infopest" >
+            android:label="@string/title_activity_infopest"
+             android:windowSoftInputMode="adjustNothing">
+            
         </activity>
         <activity
             android:name="com.kpu.plantid.Fullimage"
@@ -96,7 +98,8 @@
         </activity>
         <activity
             android:name="com.kpu.plantid.Pestlist"
-            android:label="@string/title_activity_pestlist" >
+            android:label="@string/title_activity_pestlist" 
+            >
         </activity>
         <activity
             android:name="com.kpu.plantid.Favpestlist"

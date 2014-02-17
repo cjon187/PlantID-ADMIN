@@ -64,6 +64,7 @@ public class Infopest extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+		
 		setTheme(android.R.style.Theme_Holo_Light);
 		System.gc();
 		super.onCreate(savedInstanceState);
