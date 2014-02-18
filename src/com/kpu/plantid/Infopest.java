@@ -104,7 +104,7 @@ public class Infopest extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
-	    switch (item.getItemId()) {
+	 /*   switch (item.getItemId()) {
 	        case R.id.new_game:
 	            map();
 	            return true;
@@ -122,9 +122,10 @@ public class Infopest extends Activity {
 	            return true;
 	            
 	        default:
-	            return super.onOptionsItemSelected(item);
+	            return super.onOptionsItemSelected(item);*/
+		return false;
 	    }
-	}
+	
 	
 	public void email()
 	{
@@ -362,6 +363,7 @@ public class Infopest extends Activity {
 		a.putExtra("species",species);
 		a.putExtra("latitude",latitude);
 		a.putExtra("longitude",longitude);
+		
 		startActivity(a);
 		//finish();
 	}

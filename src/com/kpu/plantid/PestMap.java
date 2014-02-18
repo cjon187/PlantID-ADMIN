@@ -92,10 +92,15 @@ public class PestMap extends Activity {
 			
 		//try        
 		try{
-				
-								
-				 String query ="select id,lat,lon,user,filename,des,scientific_name from plantlocation where scientific_name ='"+species+"'";
-				
+				String query = null;
+				 if (global.a==2)
+				 {	
+				 query ="select id,lat,lon,user,filename,des,scientific_name from pest where scientific_name ='"+species+"'";
+				 }
+				 if (global.a==2)
+				 {	
+				  query ="select id,lat,lon,user,filename,des,scientific_name from plantlocation where scientific_name ='"+species+"'";
+				 }
 		            Class.forName("com.mysql.jdbc.Driver");
 					Connection con1 = DriverManager.getConnection(url, user, pass);
 					Statement st =con1.createStatement();
@@ -156,9 +161,16 @@ public class PestMap extends Activity {
 					                
 					                note.setText(Html.fromHtml("<b>"+marker.getTitle()+"</b>"));
 									note1.setText(part1);
-									            
+									String d = null;      
+									if (global.a==1)
+									{
+										d = "http://107.170.241.190/uploads/uploads/"+part2;
+									}
+									if (global.a==2)
+									{
+									d = "http://107.170.241.190/uploads/plantlocation/"+part2;
+									}
 									
-									String d = "http://107.170.241.190/uploads/plantlocation/"+part2;
 									aq.id(R.id.imageView1).image(d, true, true, 200, 200).visible();		
 
 					                // Returning the view containing InfoWindow contents
@@ -199,8 +211,15 @@ public class PestMap extends Activity {
                String result = temp.substring(temp.lastIndexOf('#')+1).trim();
                
                try {
-				String query ="select common_name,family_name,id from pest where id ='"+result+"'";
-					
+            	   String query = null;
+            	   if (global.a==1)
+            	   {
+            		   query ="select common_name,family_name,id from pest where id ='"+result+"'";
+            	   }
+            	   if (global.a==2)
+            	   {
+            		   query ="select common_name,family_name,id from plantlocation where id ='"+result+"'";
+            	   }
 				    Class.forName("com.mysql.jdbc.Driver");
 					Connection con2 = DriverManager.getConnection(url, user, pass);
 					Statement st2 =con2.createStatement();
