@@ -1,27 +1,39 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
 
 import com.androidquery.AQuery;
 import com.imagezoom.ImageAttacher;
 import com.imagezoom.ImageAttacher.OnMatrixChangedListener;
 import com.imagezoom.ImageAttacher.OnPhotoTapListener;
+import com.kpu.PlantidAdmin.R;
+import com.mysql.jdbc.Statement;
 
-import com.kpu.plantid.Fullimage.task;
-import com.kpu.plantidAdmin.R;
-
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.RectF;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.ImageView.ScaleType;
 
-public class LocationFull extends Activity {
+public class Fullimage extends Activity {
 
 String filename;
 private static final String url = "jdbc:mysql://107.170.241.190:3306/plantid";
@@ -36,9 +48,9 @@ private AQuery aq;
 		super.onCreate(savedInstanceState);
 		System.gc();
 		setTheme(android.R.style.Theme_Light);
-		setContentView(R.layout.activity_location_full);
+		setContentView(R.layout.activity_fullimage);
 		setTitleColor(Color.RED);
-		aq = new AQuery(LocationFull.this);
+		aq = new AQuery(Fullimage.this);
 		new task().execute();
 	}
 	
@@ -60,7 +72,7 @@ private AQuery aq;
 				ImageView imageView = (ImageView)findViewById(R.id.jon12);
 							
 							filename = (filename.substring(filename.lastIndexOf("/") + 1));
-							String url1 = "http://107.170.241.190/uploads/plantlocations/"+filename;
+							String url1 = "http://107.170.241.190/uploads/uploads/"+filename;
 							 aq.id(R.id.webView1).progress(R.id.progressBar1).webImage(url1);
 							usingSimpleImage(imageView);
 	
@@ -76,7 +88,7 @@ private AQuery aq;
 
 	class task extends AsyncTask<String, String, Void>
 	{
-		ProgressDialog progressDialog = new ProgressDialog(LocationFull.this);
+		ProgressDialog progressDialog = new ProgressDialog(Fullimage.this);
 		InputStream is = null ;
 		String result = "";
 		@Override

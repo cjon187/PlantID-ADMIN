@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kpu.plantidAdmin"
+    package="com.kpu.PlantidAdmin"
     android:versionCode="1"
     android:versionName="1.0" >
 	
@@ -30,10 +30,10 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
-        android:label="@string/app_name"
+        android:label="@string/new1"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.kpu.plantid.Start"
+            android:name="com.kpu.PlantidAdmin.Start"
             android:label="ADMIN APP" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,66 +47,66 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.kpu.plantid.MainActivity"
+            android:name="com.kpu.PlantidAdmin.MainActivity"
             android:label="@string/title_activity_search" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Info"
+            android:name="com.kpu.PlantidAdmin.Info"
             android:label="@string/title_activity_info" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Add"
+            android:name="com.kpu.PlantidAdmin.Add"
             android:label="@string/title_activity_add" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Webimage"
+            android:name="com.kpu.PlantidAdmin.Webimage"
             android:label="@string/title_activity_webimage" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Slide"
+            android:name="com.kpu.PlantidAdmin.Slide"
             android:label="@string/title_activity_slide" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Search"
+            android:name="com.kpu.PlantidAdmin.Search"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Favlist"
+            android:name="com.kpu.PlantidAdmin.Favlist"
             android:label="@string/title_activity_favlist" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Infofav"
+            android:name="com.kpu.PlantidAdmin.Infofav"
             android:label="@string/title_activity_infofav" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Searchpest"
+            android:name="com.kpu.PlantidAdmin.Searchpest"
             android:label="@string/title_activity_searchpest" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.MainActivityPest"
+            android:name="com.kpu.PlantidAdmin.MainActivityPest"
             android:label="@string/title_activity_main_activity_pest" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Infopest"
+            android:name="com.kpu.PlantidAdmin.Infopest"
             android:label="@string/title_activity_infopest"
              android:windowSoftInputMode="adjustNothing">
             
         </activity>
         <activity
-            android:name="com.kpu.plantid.Fullimage"
+            android:name="com.kpu.PlantidAdmin.Fullimage"
             android:label="@string/title_activity_fullimage" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Pestlist"
+            android:name="com.kpu.PlantidAdmin.Pestlist"
             android:label="@string/title_activity_pestlist" 
             >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Favpestlist"
+            android:name="com.kpu.PlantidAdmin.Favpestlist"
             android:label="@string/title_activity_favpestlist" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Infopestfav"
+            android:name="com.kpu.PlantidAdmin.Infopestfav"
             android:label="@string/title_activity_infopestfav" >
         </activity>
 
@@ -118,31 +118,31 @@
             android:value="AIzaSyCvB-o_G2jTv2WIlY-Z-QC1QDAuALqidDY" />
 
         <activity
-            android:name="com.kpu.plantid.PestMap"
+            android:name="com.kpu.PlantidAdmin.PestMap"
             android:label="@string/title_activity_pest_map" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.InfoMapPest"
+            android:name="com.kpu.PlantidAdmin.InfoMapPest"
             android:label="@string/title_activity_info_map_pest" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Kwantlen"
+            android:name="com.kpu.PlantidAdmin.Kwantlen"
             android:label="@string/title_activity_kwantlen" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Addloc"
+            android:name="com.kpu.PlantidAdmin.Addloc"
             android:label="@string/title_activity_addloc" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.InfoLocationMap"
+            android:name="com.kpu.PlantidAdmin.InfoLocationMap"
             android:label="@string/title_activity_info_location_map" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.LocationFull"
+            android:name="com.kpu.PlantidAdmin.LocationFull"
             android:label="@string/title_activity_location_full" >
         </activity>
         <activity
-            android:name="com.kpu.plantid.Information"
+            android:name="com.kpu.PlantidAdmin.Information"
             android:label="@string/title_activity_information" >
         </activity>
     </application>

@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -8,7 +8,7 @@ import com.androidquery.AQuery;
 import com.imagezoom.ImageAttacher;
 import com.imagezoom.ImageAttacher.OnMatrixChangedListener;
 import com.imagezoom.ImageAttacher.OnPhotoTapListener;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 
 

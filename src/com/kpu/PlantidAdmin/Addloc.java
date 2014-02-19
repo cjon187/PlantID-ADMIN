@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -17,8 +17,8 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
-import com.kpu.plantid.Add.task3;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
+import com.kpu.PlantidAdmin.Add.task3;
 import com.mysql.jdbc.PreparedStatement;
 
 import android.media.ExifInterface;

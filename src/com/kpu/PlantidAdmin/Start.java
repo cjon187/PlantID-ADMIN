@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 
 import java.io.InputStream;
@@ -22,7 +22,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 public class Start extends Activity {
 

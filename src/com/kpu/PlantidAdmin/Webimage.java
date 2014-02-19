@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 
 
@@ -12,7 +12,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 public class Webimage extends Activity {
 	ProgressDialog prDialog;	

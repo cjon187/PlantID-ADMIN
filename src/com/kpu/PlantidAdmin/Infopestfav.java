@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,8 +15,8 @@ import java.sql.SQLException;
 import java.util.regex.Pattern;
 
 import com.androidquery.AQuery;
-import com.kpu.plantid.Infopest.task3;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
+import com.kpu.PlantidAdmin.Infopest.task3;
 import com.mysql.jdbc.Statement;
 
 import android.net.Uri;

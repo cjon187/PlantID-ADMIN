@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -39,7 +39,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 import com.mysql.jdbc.Statement;
 
 public class Infofav extends Activity {

@@ -1,6 +1,11 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,17 +25,18 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.kpu.plantidAdmin.R;
+import android.widget.Toast;
+import com.kpu.PlantidAdmin.R;
 
-public class Favpestlist extends Activity {
+public class Favlist extends Activity {
 	private List<Car> myCars = new ArrayList<Car>();
 	int count = 0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setTheme(android.R.style.Theme_Black);
-		setContentView(R.layout.activity_favpestlist);
-		setTitleColor(Color.RED);
+		setContentView(R.layout.activity_favlist);
+		setTitleColor(Color.GREEN);
 		new task().execute();
 		registerClickCallback();
 		
@@ -38,7 +44,7 @@ public class Favpestlist extends Activity {
 	@Override
 	protected void onRestart()
 	{   super.onResume();
-		Intent a = new Intent(getApplicationContext(),Favpestlist.class);
+		Intent a = new Intent(getApplicationContext(),Favlist.class);
 		startActivity(a);
 		finish();
 	}
@@ -51,15 +57,15 @@ public class Favpestlist extends Activity {
 	
 	
 	private void populateCarList() {
-		DbHelper dbHelper = new DbHelper(Favpestlist.this);
+		DbHelper dbHelper = new DbHelper(Favlist.this);
 		 SQLiteDatabase db = dbHelper.getWritableDatabase();
-		 Cursor c = db.rawQuery("SELECT rowid,* FROM mypest;",null);
+		 Cursor c = db.rawQuery("SELECT rowid,* FROM myfav;",null);
 		 
 		
 		
 		while (c.moveToNext())
 		{
-							
+						
 			myCars.add(new Car(c.getString(c.getColumnIndex("family")),c.getString(c.getColumnIndex("species")),c.getString(c.getColumnIndex("common")),c.getString(c.getColumnIndex("pid")),null));
 			count = count+1;
 		}
@@ -74,7 +80,7 @@ public class Favpestlist extends Activity {
 
 	class task extends AsyncTask<String, String, Void>
 	{
-		ProgressDialog progressDialog = new ProgressDialog(Favpestlist.this);
+		ProgressDialog progressDialog = new ProgressDialog(Favlist.this);
 		InputStream is = null ;
 		String result = "";
 		@Override
@@ -102,14 +108,14 @@ public class Favpestlist extends Activity {
 		protected void onPostExecute(Void v)
 		{
 			populateListView();
-			setTitle(count+" Pest In Your Favorites List");
+			setTitle(count+" Plants In Your Favorites List");
 			this.progressDialog.dismiss();
 		}
 	}//task
 	
 	private class MyListAdapter extends ArrayAdapter<Car> {
 		public MyListAdapter() {
-			super(Favpestlist.this, R.layout.item_view2, myCars);
+			super(Favlist.this, R.layout.item_view2, myCars);
 		}
 
 		@Override
@@ -127,17 +133,17 @@ public class Favpestlist extends Activity {
 
 
 			// family
-			TextView makeText = (TextView) itemView.findViewById(R.id.textView2);
-			makeText.setText(currentCar.getSpecies());
+						TextView makeText = (TextView) itemView.findViewById(R.id.textView2);
+						makeText.setText(currentCar.getSpecies());
 
-			// species
-			TextView yearText = (TextView) itemView.findViewById(R.id.textView1);
-			
-			yearText.setText((Html.fromHtml("<i>Description:  </i></font>" + currentCar.getFamily())));
-			// Common name:
-			TextView condionText = (TextView) itemView.findViewById(R.id.textView4);
-			condionText.setText((Html.fromHtml("<i>Pest:  </i></font>" + currentCar.getCommon())));
-			
+						// species
+						TextView yearText = (TextView) itemView.findViewById(R.id.textView1);
+						
+						yearText.setText((Html.fromHtml("<i>Description:  </i></font>" + currentCar.getFamily())));
+						// Common name:
+						TextView condionText = (TextView) itemView.findViewById(R.id.textView4);
+						condionText.setText((Html.fromHtml("<i>Pest:  </i></font>" + currentCar.getCommon())));
+
 			return itemView;
 		}
 	}//adapter
@@ -152,7 +158,7 @@ public class Favpestlist extends Activity {
 				Car clickedCar = myCars.get(position);
 				
 				//Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
-				Intent i = new Intent(getApplicationContext(), Infopestfav.class);
+				Intent i = new Intent(getApplicationContext(), Infofav.class);
 	     		i.putExtra("id",clickedCar.getId());
 	     		i.putExtra("common", clickedCar.getCommon());
 	     		i.putExtra("family", clickedCar.getFamily());
@@ -166,7 +172,7 @@ public class Favpestlist extends Activity {
 	
 	public void refresh(View view)
 	{
-		Intent a = new Intent(getApplicationContext(),Favpestlist.class);
+		Intent a = new Intent(getApplicationContext(),Favlist.class);
 		startActivity(a);
 		finish();
 	}

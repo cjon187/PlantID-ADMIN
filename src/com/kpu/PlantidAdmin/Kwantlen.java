@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -41,7 +41,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 public class Kwantlen extends Activity {
 	LatLng LOCATION1,LOCATION,myLocation;

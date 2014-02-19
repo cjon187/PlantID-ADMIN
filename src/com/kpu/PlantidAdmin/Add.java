@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -49,7 +49,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 import com.mysql.jdbc.PreparedStatement;
 
 public class Add extends Activity {

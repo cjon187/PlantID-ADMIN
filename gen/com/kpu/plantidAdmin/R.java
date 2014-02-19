@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.kpu.plantidAdmin;
+package com.kpu.PlantidAdmin;
 
 public final class R {
     public static final class array {
@@ -413,7 +413,7 @@ containing a value of this type.
         public static final int webimage=0x7f0b0017;
     }
     public static final class string {
-        public static final int action_settings=0x7f06001b;
+        public static final int action_settings=0x7f06001c;
         public static final int app_name=0x7f06001a;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
@@ -438,7 +438,7 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f060014;
-        public static final int common=0x7f060020;
+        public static final int common=0x7f060021;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -510,32 +510,33 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
-        public static final int family=0x7f06001e;
-        public static final int hello_world=0x7f06001c;
-        public static final int species=0x7f06001f;
-        public static final int title_activity_add=0x7f060022;
-        public static final int title_activity_addloc=0x7f060033;
-        public static final int title_activity_favlist=0x7f060027;
-        public static final int title_activity_favpestlist=0x7f06002e;
-        public static final int title_activity_fullimage=0x7f06002c;
-        public static final int title_activity_gpspic=0x7f060024;
-        public static final int title_activity_info=0x7f060021;
-        public static final int title_activity_info_location_map=0x7f060034;
-        public static final int title_activity_info_map_pest=0x7f060031;
-        public static final int title_activity_infofav=0x7f060028;
-        public static final int title_activity_infopest=0x7f06002b;
-        public static final int title_activity_infopestfav=0x7f06002f;
-        public static final int title_activity_information=0x7f060036;
-        public static final int title_activity_kwantlen=0x7f060032;
-        public static final int title_activity_location_full=0x7f060035;
-        public static final int title_activity_main_activity_pest=0x7f06002a;
-        public static final int title_activity_pest_map=0x7f060030;
-        public static final int title_activity_pestlist=0x7f06002d;
-        public static final int title_activity_search=0x7f06001d;
-        public static final int title_activity_searchpest=0x7f060029;
-        public static final int title_activity_slide=0x7f060025;
-        public static final int title_activity_start=0x7f060026;
-        public static final int title_activity_webimage=0x7f060023;
+        public static final int family=0x7f06001f;
+        public static final int hello_world=0x7f06001d;
+        public static final int new1=0x7f06001b;
+        public static final int species=0x7f060020;
+        public static final int title_activity_add=0x7f060023;
+        public static final int title_activity_addloc=0x7f060034;
+        public static final int title_activity_favlist=0x7f060028;
+        public static final int title_activity_favpestlist=0x7f06002f;
+        public static final int title_activity_fullimage=0x7f06002d;
+        public static final int title_activity_gpspic=0x7f060025;
+        public static final int title_activity_info=0x7f060022;
+        public static final int title_activity_info_location_map=0x7f060035;
+        public static final int title_activity_info_map_pest=0x7f060032;
+        public static final int title_activity_infofav=0x7f060029;
+        public static final int title_activity_infopest=0x7f06002c;
+        public static final int title_activity_infopestfav=0x7f060030;
+        public static final int title_activity_information=0x7f060037;
+        public static final int title_activity_kwantlen=0x7f060033;
+        public static final int title_activity_location_full=0x7f060036;
+        public static final int title_activity_main_activity_pest=0x7f06002b;
+        public static final int title_activity_pest_map=0x7f060031;
+        public static final int title_activity_pestlist=0x7f06002e;
+        public static final int title_activity_search=0x7f06001e;
+        public static final int title_activity_searchpest=0x7f06002a;
+        public static final int title_activity_slide=0x7f060026;
+        public static final int title_activity_start=0x7f060027;
+        public static final int title_activity_webimage=0x7f060024;
     }
     public static final class style {
         /** 
@@ -569,9 +570,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize com.kpu.plantidAdmin:adSize}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSize com.kpu.PlantidAdmin:adSize}</code></td><td>
     The size of the ad.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId com.kpu.plantidAdmin:adUnitId}</code></td><td> The ad unit ID.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId com.kpu.PlantidAdmin:adUnitId}</code></td><td> The ad unit ID.</td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adUnitId
@@ -596,7 +597,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.kpu.plantidAdmin:adSize
+          @attr name com.kpu.PlantidAdmin:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
@@ -612,7 +613,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.kpu.plantidAdmin:adUnitId
+          @attr name com.kpu.PlantidAdmin:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 1;
         /** Attributes that can be used with a MapAttrs.
@@ -621,20 +622,20 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.kpu.plantidAdmin:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.kpu.plantidAdmin:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.kpu.plantidAdmin:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.kpu.plantidAdmin:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.kpu.plantidAdmin:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.kpu.plantidAdmin:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.kpu.plantidAdmin:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.kpu.plantidAdmin:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.kpu.plantidAdmin:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.kpu.plantidAdmin:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.kpu.plantidAdmin:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.kpu.plantidAdmin:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.kpu.plantidAdmin:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.kpu.plantidAdmin:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.kpu.PlantidAdmin:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.kpu.PlantidAdmin:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.kpu.PlantidAdmin:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.kpu.PlantidAdmin:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.kpu.PlantidAdmin:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.kpu.PlantidAdmin:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.kpu.PlantidAdmin:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.kpu.PlantidAdmin:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.kpu.PlantidAdmin:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.kpu.PlantidAdmin:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.kpu.PlantidAdmin:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.kpu.PlantidAdmin:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.kpu.PlantidAdmin:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.kpu.PlantidAdmin:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -658,7 +659,7 @@ containing a value of this type.
             0x7f01000e, 0x7f01000f
         };
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -668,11 +669,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:cameraBearing
+          @attr name com.kpu.PlantidAdmin:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -682,11 +683,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:cameraTargetLat
+          @attr name com.kpu.PlantidAdmin:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -696,11 +697,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:cameraTargetLng
+          @attr name com.kpu.PlantidAdmin:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -710,11 +711,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:cameraTilt
+          @attr name com.kpu.PlantidAdmin:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -724,11 +725,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:cameraZoom
+          @attr name com.kpu.PlantidAdmin:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -744,11 +745,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.kpu.plantidAdmin:mapType
+          @attr name com.kpu.PlantidAdmin:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -758,11 +759,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:uiCompass
+          @attr name com.kpu.PlantidAdmin:uiCompass
         */
         public static final int MapAttrs_uiCompass = 6;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -772,11 +773,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:uiRotateGestures
+          @attr name com.kpu.PlantidAdmin:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 7;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -786,11 +787,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:uiScrollGestures
+          @attr name com.kpu.PlantidAdmin:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -800,11 +801,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:uiTiltGestures
+          @attr name com.kpu.PlantidAdmin:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -814,11 +815,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:uiZoomControls
+          @attr name com.kpu.PlantidAdmin:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 10;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -828,11 +829,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:uiZoomGestures
+          @attr name com.kpu.PlantidAdmin:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 11;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -842,11 +843,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:useViewLifecycle
+          @attr name com.kpu.PlantidAdmin:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.kpu.plantidAdmin.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.kpu.PlantidAdmin.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -856,7 +857,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.kpu.plantidAdmin:zOrderOnTop
+          @attr name com.kpu.PlantidAdmin:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 13;
     };

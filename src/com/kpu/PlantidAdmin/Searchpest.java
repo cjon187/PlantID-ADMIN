@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 
 
@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 public class Searchpest extends Activity {
 String animal,disease,species,pest;

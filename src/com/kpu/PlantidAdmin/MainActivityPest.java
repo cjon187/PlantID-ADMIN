@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,7 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidquery.AQuery;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 
 public class MainActivityPest extends Activity {

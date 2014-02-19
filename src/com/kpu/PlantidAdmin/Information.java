@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.InputStream;
 import java.sql.Connection;
@@ -21,7 +21,7 @@ import android.util.Patterns;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 public class Information extends Activity {
 TextView msg;

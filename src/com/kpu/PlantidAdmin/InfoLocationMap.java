@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,6 +14,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.Pattern;
 
+import com.androidquery.AQuery;
+import com.kpu.PlantidAdmin.R;
+import com.kpu.PlantidAdmin.InfoMapPest.task3;
+import com.mysql.jdbc.Statement;
+
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
@@ -25,50 +36,32 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.StrictMode;
-import android.provider.MediaStore;
 import android.text.Html;
 import android.util.Patterns;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.androidquery.AQuery;
-import com.kpu.plantidAdmin.R;
-import com.mysql.jdbc.Statement;
-
-public class Infopest extends Activity {
+public class InfoLocationMap extends Activity {
 	String common,species,family,webimage,id,email1,emailcheck,description,filename;
-	ResultSet rs1;
-	String url1;
 	private AQuery aq;
 	private static final String url = "jdbc:mysql://107.170.241.190:3306/plantid";
 	private static final String user = "aaron";
 	private static final String pass = "kpuaaron";
-	String file1;
+	
 	int mState=0;
-	Drawable d;
-	int size =2;
+	
 	String jon,latitude,longitude;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-		
+		 System.gc();
 		setTheme(android.R.style.Theme_Holo_Light);
-		System.gc();
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_infopest);
+		setContentView(R.layout.activity_info_location_map);
 		setTitleColor(Color.RED);
 		//get the users android account
 		Pattern emailPattern = Patterns.EMAIL_ADDRESS; // API level 8+
@@ -104,32 +97,39 @@ public class Infopest extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
-	 /*   switch (item.getItemId()) {
-	        case R.id.new_game:
-	            map();
-	            return true;
+	    switch (item.getItemId()) {
+	        
 	        case R.id.main:
 		            gotomain();
 		            return true;
 	        case R.id.share:
 	            email();
 	            return true;
-	        case R.id.fav:
-	            fav();
-	            return true;
 	        case R.id.report:
 	            report();
 	            return true;
+	        
 	            
 	        default:
-	            return super.onOptionsItemSelected(item);*/
-		return false;
+	            return super.onOptionsItemSelected(item);
 	    }
-	
-	
+	}
+	public void report()
+	{
+		Intent i = new Intent(Intent.ACTION_SEND);
+		i.setType("message/rfc822");
+		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"cjon187@gmail.com"});
+		i.putExtra(Intent.EXTRA_SUBJECT, "Error in Location for id= "+id);
+		i.putExtra(Intent.EXTRA_TEXT   , "");
+		try {
+		    startActivity(Intent.createChooser(i, "Send mail..."));
+		} catch (android.content.ActivityNotFoundException ex) {
+		    Toast.makeText(InfoLocationMap.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+		}
+	}
 	public void email()
 	{
-		AlertDialog.Builder builder = new AlertDialog.Builder(Infopest.this);
+		AlertDialog.Builder builder = new AlertDialog.Builder(InfoLocationMap.this);
 		builder.setMessage("Share this screenshot? An image of this screenshot will be saved in your gallery\n and an option to share it now will be avaliable.").setPositiveButton("Yes", dialogClickListener1)
 		.setNegativeButton("No", dialogClickListener1).show();
 	}
@@ -149,19 +149,6 @@ public class Infopest extends Activity {
 		}
 	};
 	
-	public void report()
-	{
-		Intent i = new Intent(Intent.ACTION_SEND);
-		i.setType("message/rfc822");
-		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"cjon187@gmail.com"});
-		i.putExtra(Intent.EXTRA_SUBJECT, "Error in Pest for id= "+id);
-		i.putExtra(Intent.EXTRA_TEXT   , "");
-		try {
-		    startActivity(Intent.createChooser(i, "Send mail..."));
-		} catch (android.content.ActivityNotFoundException ex) {
-		    Toast.makeText(Infopest.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
-		}
-	}
 	public void share()
 	 {
 		View view= findViewById(R.id.scrollView1);
@@ -219,6 +206,8 @@ public class Infopest extends Activity {
                 | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
+			
+			
 	}
 	public void add()
 	{
@@ -236,8 +225,8 @@ public class Infopest extends Activity {
 	
 	public void remove(View view)
 	{
-		AlertDialog.Builder builder = new AlertDialog.Builder(Infopest.this);
-		builder.setMessage("Delete "+species+ " From your entry from database?").setPositiveButton("Yes", dialogClickListener)
+		AlertDialog.Builder builder = new AlertDialog.Builder(InfoLocationMap.this);
+		builder.setMessage("Delete "+species+ " location from database?").setPositiveButton("Yes", dialogClickListener)
 		.setNegativeButton("No", dialogClickListener).show();
 	}
 		
@@ -250,16 +239,8 @@ public class Infopest extends Activity {
 					Class.forName("com.mysql.jdbc.Driver");
 					Connection con = DriverManager.getConnection(url, user, pass);
 					Statement st1 = (Statement) con.createStatement();
-					if (global.a==1)
-					{
-					st1.executeUpdate("DELETE from pest where id = '"+id+"'");
-					}
-					if (global.a==2)
-					{
-						st1.executeUpdate("DELETE from plantlocation where id = '"+id+"'");
-
-					}
-					
+					st1.executeUpdate("DELETE from plantlocation where id = '"+id+"'");
+										
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -267,7 +248,7 @@ public class Infopest extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				MainActivityPest.fa.finish();
+				Kwantlen.fa1.finish();
 				finish();
 				break;
 
@@ -318,32 +299,6 @@ public class Infopest extends Activity {
         return stream;
     }
 	
-	public void update (View view)
-	{
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection(url, user, pass);
-			Statement st1 = (Statement) con.createStatement();
-			EditText e1=(EditText)findViewById(R.id.editText1);
-			String update1=e1.getText().toString();
-			if (global.a==1)
-			{
-			st1.executeUpdate("UPDATE pest SET des='"+update1+"' WHERE id="+id+"");
-			}
-			if (global.a==2)
-			{
-				st1.executeUpdate("UPDATE plantlocation SET des='"+update1+"' WHERE id="+id+"");
-			}
-			MainActivityPest.fa.finish();
-			finish();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 	public void google(View view)
 	{
 		
@@ -354,27 +309,25 @@ public class Infopest extends Activity {
 	
 	public void map()
 	
-	{
-	
-		if (!latitude.equals("none"))
+	{if (!latitude.equals("none"))
 	{
 		
 		Intent a = new Intent(getApplicationContext(),PestMap.class);
 		a.putExtra("species",species);
 		a.putExtra("latitude",latitude);
 		a.putExtra("longitude",longitude);
-		
 		startActivity(a);
-		//finish();
+		
 	}
 	else{
 		
-		Toast toast = Toast.makeText(Infopest.this,"There is no location for this image.", Toast.LENGTH_LONG);
+		Toast toast = Toast.makeText(InfoLocationMap.this,"There is no location for this image.", Toast.LENGTH_LONG);
 		toast.setGravity(Gravity.CENTER, 0, 0);
 		toast.show();
 	}
 		
 	}
+	
 	
 	
 	
@@ -409,24 +362,11 @@ public class Infopest extends Activity {
 
 		}//if
 		try {
-			
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url, user, pass);
-			
-			//strip common
-			common = common.trim();
-			common = common.replace("'","''");
 			Statement st1 = (Statement) con.createStatement();
 			
-			if (global.a==1)
-			{
-				rs1 = st1.executeQuery("select dd,lat,lon,des,zone,user,pest,family_name,common_name,filename from pest where id = '"+id+"'");
-
-			}
-			if (global.a==2)
-			{
-			rs1 = st1.executeQuery("select dd,lat,lon,des,zone,user,pest,family_name,common_name,filename from plantlocation where id = '"+id+"'");
-			}
+			ResultSet rs1 = st1.executeQuery("select dd,lat,lon,des,zone,user,pest,family_name,common_name,filename from plantlocation where id = '"+id+"'");
 						
 			while (rs1.next())
 			{
@@ -443,7 +383,6 @@ public class Infopest extends Activity {
 				final String date = rs1.getString("dd");
 				filename = fn;
 				latitude = lat;
-				longitude = lon;
 				description = des;
 				email1=email;
 				
@@ -477,29 +416,22 @@ public class Infopest extends Activity {
 					TextView date1= (TextView)findViewById(R.id.date);
 					date1.setText(Html.fromHtml("<b>Date Submitted: </font></b>"+date));
 					
-					EditText e1 = (EditText)findViewById(R.id.editText1);
-					e1.setText(des);
-					
-					aq = new AQuery(Infopest.this);
+					aq = new AQuery(InfoLocationMap.this);
 					filename = (filename.substring(filename.lastIndexOf("/") + 1));
-					if(global.a==1)
-					{
-						url1 = "http://107.170.241.190/uploads/uploads/"+filename;
-					}
-					if (global.a==2)
-					{
-					url1 = "http://107.170.241.190/uploads/plantlocations/"+filename;
-					}
+					String url1 = "http://107.170.241.190/uploads/plantlocations/"+filename;
 					aq.id(R.id.jon12).image(url1).visible();
-				
 					
 					
 					
 					
-						//admin can see
+					
+					if (email1.equals(emailcheck))//check and see if user is submitter
+					{
+						
 						Button b = (Button)findViewById(R.id.button2);
 						b.setVisibility(View.VISIBLE);
-						
+					}
+							
 					
 			
 				}
@@ -518,14 +450,14 @@ public class Infopest extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		
-		getMenuInflater().inflate(R.menu.infopest, menu);
+		getMenuInflater().inflate(R.menu.info_location_map, menu);
 		// inflate menu from xml
 	   
 		return true;
 	}
 	class task3 extends AsyncTask<String, String, Void>
 	{
-  		ProgressDialog progressDialog = new ProgressDialog(Infopest.this);
+  		ProgressDialog progressDialog = new ProgressDialog(InfoLocationMap.this);
   		
 	      protected void onPreExecute() {
 	    	  progressDialog.setMessage("Connecting, Please Wait..");
@@ -555,20 +487,20 @@ public class Infopest extends Activity {
 	public void menu(View view)
 	{
 		
-		Infopest.this.openOptionsMenu();
+		InfoLocationMap.this.openOptionsMenu();
 	}
 	
 	public void slideshow(View view)
 	{
-		Intent i = new Intent(this, Fullimage.class);
+		Intent i = new Intent(this, LocationFull.class);
 		i.putExtra("filename", filename);
        
 		startActivity(i);
 	}
 	
-	public void fav()
+	/*public void fav()
 	{	
-		AlertDialog.Builder builder = new AlertDialog.Builder(Infopest.this);
+		AlertDialog.Builder builder = new AlertDialog.Builder(InfoLocationMap.this);
 		builder.setMessage("Add "+species+ " to your favorites list?").setPositiveButton("Yes", dialogClickListener2)
 		.setNegativeButton("No", dialogClickListener2).show();
 		
@@ -581,7 +513,7 @@ public class Infopest extends Activity {
 			switch (which){
 			case DialogInterface.BUTTON_POSITIVE:
 				try {
-					DbHelper dbHelper1 = new DbHelper(Infopest.this);
+					DbHelper dbHelper1 = new DbHelper(InfoLocationMap.this);
 					SQLiteDatabase db1 = dbHelper1.getWritableDatabase();
 					db1.execSQL("INSERT INTO mypest (species,family,common,pid) VALUES ('"+species+"','"+description+"','"+common+"','"+id+"');");
 					Toast.makeText(getApplicationContext(), "Plant Added", Toast.LENGTH_SHORT).show();
@@ -597,6 +529,6 @@ public class Infopest extends Activity {
 				break;
 			}
 		}
-	};
+	};*/
 	
 }

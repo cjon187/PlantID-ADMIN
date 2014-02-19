@@ -1,4 +1,4 @@
-package com.kpu.plantid;
+package com.kpu.PlantidAdmin;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidquery.AQuery;
-import com.kpu.plantidAdmin.R;
+import com.kpu.PlantidAdmin.R;
 
 public class MainActivity extends Activity {
 	String fam,species,common,zone,pest,month,flowerc,leaff,leafa,type,leafs,fruitc;
