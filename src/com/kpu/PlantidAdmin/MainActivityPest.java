@@ -222,11 +222,13 @@ public class MainActivityPest extends Activity {
 				
 				//Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
 				Intent i = new Intent(getApplicationContext(), Infopest.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
 	     		i.putExtra("id",clickedCar.getId());
 	     		i.putExtra("common", clickedCar.getCommon());
 	     		i.putExtra("family", clickedCar.getFamily());
 	     		i.putExtra("species", clickedCar.getSpecies());
 	     		startActivity(i);
+	     		finish();
 			}
 		});
 	}

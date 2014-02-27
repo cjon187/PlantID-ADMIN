@@ -35,6 +35,7 @@ import android.provider.MediaStore;
 import android.text.Html;
 import android.util.Patterns;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,7 +46,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidquery.AQuery;
-import com.kpu.PlantidAdmin.R;
 import com.mysql.jdbc.Statement;
 
 public class Infopest extends Activity {
@@ -267,9 +267,9 @@ public class Infopest extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				MainActivityPest.fa.finish();
-				finish();
-				break;
+				 Intent a = new Intent(getApplicationContext(),MainActivityPest.class);
+			        startActivity(a);
+			        finish();
 
 			case DialogInterface.BUTTON_NEGATIVE:
 				//No button clicked
@@ -334,8 +334,7 @@ public class Infopest extends Activity {
 			{
 				st1.executeUpdate("UPDATE plantlocation SET des='"+update1+"' WHERE id="+id+"");
 			}
-			MainActivityPest.fa.finish();
-			finish();
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -573,6 +572,16 @@ public class Infopest extends Activity {
 		.setNegativeButton("No", dialogClickListener2).show();
 		
 		
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if (keyCode == KeyEvent.KEYCODE_BACK ) {
+	        Intent a = new Intent(getApplicationContext(),MainActivityPest.class);
+	        startActivity(a);
+	        finish();
+	    }
+	    return super.onKeyDown(keyCode, event);
 	}
 	
 	DialogInterface.OnClickListener dialogClickListener2 = new DialogInterface.OnClickListener() {
